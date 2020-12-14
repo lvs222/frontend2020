@@ -24,25 +24,26 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
 
 
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
-
+- html is zo goed als klaar. 
+- stijling begonnen, maar nog niet echt tegen iets aangelopen.
 
 
 ## Voortgang 1 (week 3)
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+- html is zo goed als klaar. 
+- stijling begonnen, maar nog niet echt tegen iets aangelopen.
 
 **Screenshot(s):**
 
 -screenshot(s) van hoe ver je bent met korte uitleg-
+
 
 ### Agenda voor meeting
 
@@ -56,8 +57,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
-
+aantekeningen tijdens het gesprek 1:
+- logo uit de ul halen 
+- altijd door de validator halen 
+- accessability check doen 
+- main een id geven voor de stijling (omdat je twee verschillende pagina's hebt met één css)
 
 
 ## Breakdownschets (week 1)
