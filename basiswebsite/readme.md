@@ -66,7 +66,10 @@ aantekeningen tijdens het gesprek 1:
 
 ## Breakdownschets (week 1)
 
--uitwerken voor de 1e werkgroep - eind van de eerste week-
+<img src="images/IMG_4354.jpg" width="375px" alt="breakdown schets">
+<img src="images/IMG_4355.jpg" width="375px" alt="breakdown schets">
+
+
 
 
 
