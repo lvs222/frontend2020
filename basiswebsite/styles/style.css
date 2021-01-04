@@ -305,7 +305,7 @@ footer section ul {
 
 footer section li {
     list-style: none;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     color: #96968A;
     font-size: 14px;
@@ -322,13 +322,21 @@ footer h3 {
     color: #969696;
     margin-left: 2rem;
     margin-right: 2rem;
+    margin-top: 1.5rem;
 
 }
 
 footer section p {
     font-size: 12px;
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 
+footer section p:nth-of-type(2){
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    font-weight: 200;
+}
 
 
 footer section img {
@@ -345,8 +353,9 @@ footer button {
     padding: 5px 20px;
     text-decoration: none;
     border-style: solid;
-    border-color: #282829;
+    border-color: #969696;
     border-width: 1px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
