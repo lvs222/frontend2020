@@ -75,6 +75,11 @@ header div:nth-of-type(1) {
     width: auto;
 }
 
+header nav div{
+    position: absolute;
+    
+}
+
 /* ruimte hamburger */
 .hamburger {
     position: relative;
@@ -116,6 +121,7 @@ span::after {
     transition: 0.75s;
 }
 
+
 /******************************/
 /*          NAVIGATIE         */
 /******************************/
@@ -133,12 +139,18 @@ nav {
 
 /* als de nav actief is, wordt hij binnengeschoven*/
 nav.active {
-    transform: translateX(-1%);
+    transform: translateX(0%);
+}
+
+
+nav ul{
+position: absolute;
 }
 
 /* de hoogte van de list items in de nav*/
 nav ul li {
     height: 35px;
+    margin-left: 2rem;
 }
 
 .logo{
@@ -173,8 +185,8 @@ header h1 {
     line-height: 2.5rem;
 }
 
-header button {
-    display: block;
+body header section:nth-of-type(2) h2{
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     background-color: #282829;
@@ -183,9 +195,17 @@ header button {
     text-decoration: none;
     border: none;
     width: 50%;
+    font-weight: 300;
+    font-size: 12px;
+    justify-content: center;
 
 }
 
+
+/* cool css hover effect */
+
+a:hover{
+}
 /* stijling van de navigatie */
 
 nav {
@@ -202,11 +222,10 @@ nav ul li {
     flex-direction: row;
     padding: 0 1rem;
     list-style: none;
-    /*display: none;*/
     background-color: #fff;
     text-transform: uppercase;
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 500;
     padding: 0.5rem 0rem 0rem 0rem;
     border-top: solid;
     border-width: 1px;
@@ -219,19 +238,20 @@ nav ul li:nth-of-type(8) {
 }
 
 nav ul li:nth-of-type(1) img {
-    margin-left: 17rem;
+    margin-left: 14rem;
 }
 
 nav ul li:nth-of-type(2) img {
-    margin-left: 18rem;
+    margin-left: 15rem;
 }
 
 nav ul li:nth-of-type(7) img {
-    margin-left: 17rem;
+    margin-left: 14rem;
 }
 
 nav ul li img {
-    width: 1rem;
+    width: 0.7rem;
+    height: 0.7rem;
 }
 
 
@@ -239,7 +259,7 @@ img {
     max-width: 100%;
 }
 
-header a:nth-of-type(2){
+body header section a{
     text-transform: uppercase;
     color: #000;
     font-weight: 300;
@@ -309,7 +329,7 @@ main section article:nth-of-type(4) {
     :
 }
 
-main section article:nth-of-type(4) button {
+main section:nth-of-type(1) a h2 {
     background-color: #fff;
     color: #000;
     padding: 5px 55px;
@@ -318,6 +338,7 @@ main section article:nth-of-type(4) button {
     border-width: 1px;
     border-color: #c8c8c8;
     margin: 3rem;
+    font-size: 12px;
 }
 
 main section article:nth-of-type(4) p {
@@ -439,16 +460,17 @@ main section:nth-of-type(3) p {
 /******************************/
 /* stijling van de buttons in de sections */
 
-main section:nth-of-type(2) button {
+main section:nth-of-type(2) a h2 {
     background-color: #fff;
     color: #000;
     padding: 5px 20px;
     text-decoration: none;
     border-style: solid;
     border-color: #fff;
+    font-size: 12px
 }
 
-main section:nth-of-type(4) button {
+main section:nth-of-type(4) a h2 {
     background-color: transparent;
     color: #fff;
     padding: 5px 20px;
@@ -456,9 +478,10 @@ main section:nth-of-type(4) button {
     border-style: solid;
     border-color: #fff;
     border-width: 1px;
+    font-size: 12px;
 }
 
-main section:nth-of-type(5) button {
+main section:nth-of-type(5) a h2 {
     display: block;
     background-color: transparent;
     color: #fff;
@@ -467,9 +490,10 @@ main section:nth-of-type(5) button {
     border-style: solid;
     border-color: #fff;
     border-width: 1px;
+    font-size: 12px;
 }
 
-main section:nth-of-type(6) button {
+main section:nth-of-type(6) a h2 {
     display: block;
     background-color: #fff;
     color: #000;
@@ -540,7 +564,7 @@ footer section img {
     margin: 0.25rem;
 }
 
-footer button {
+footer section a h2 {
     display: block;
     margin-left: 2rem;
     background-color: #fff;
@@ -553,12 +577,14 @@ footer button {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: 400;
+    font-size: 12px;
+    margin-right: 2rem;
 }
 
 footer section:nth-of-type(3) {
     margin-left: 2rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 8rem;
 }
 
 
@@ -633,7 +659,7 @@ footer section:nth-of-type(3) {
     font-weight: 400;
 }
 
-.cssnewarrivals nav a {
+.cssnewarrivals section  a {
     text-transform: uppercase;
     color: #fff;
     font-weight: 300;
