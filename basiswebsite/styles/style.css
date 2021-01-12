@@ -1,15 +1,23 @@
+/* styling om op "0" te beginnen */
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
+
+/******************************/
+/*     DEFAULT TYPOGRAFIE     */
+/******************************/
 
 h1,
 h2,
 h3,
 p,
 li,
-a {
+a,
+li {
     font-family: 'Inter', sans-serif;
     font-weight: 100;
 }
@@ -26,7 +34,9 @@ button {
     text-transform: uppercase;
 }
 
-/* aside styling */
+/******************************/
+/*          ASIDE STIJLING    */
+/******************************/
 
 a {
     text-decoration: none;
@@ -46,48 +56,113 @@ aside {
 
 aside p:nth-last-child(1) {
     text-decoration: underline;
+    margin-left: 0.5rem;
 }
 
-
-aside img {
+body header aside img {
     max-width: 50px;
 }
 
+/******************************/
+/*          HAMBURGER MENU    */
+/******************************/
+/* ik ben met het maken van het hamburger menu geholpen door Lisa Oude Elferink (studente CMD).*/
 
-/* stijling van de header */
+/* container hamburger */
+header div:nth-of-type(1) {
+    position: relative;
+    height: 6rem;
+    width: auto;
+}
 
+/* ruimte hamburger */
+.hamburger {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: -1.5rem;
+}
+
+/* hamburger strepen */
+span::before,
+span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #272727;
+    height: 3px;
+    width: 1rem;
+    left: 2rem;
+}
+
+/* hamburger posistie onderste streep  */
+span::after {
+    bottom: 39px;
+}
+
+/* hamburger transitie boventste streep, zo vormt het het kruisje */
+.hamburger.active span::before {
+    top: 46px;
+    transform: rotate(135deg);
+    transition: 0.75s;
+}
+
+/* hamburger transitie onderste streep, zo vormt het het kruisje */
+.hamburger.active span::after {
+    top: 46px;
+    transform: rotate(225deg);
+    transition: 0.75s;
+}
+
+/******************************/
+/*          NAVIGATIE         */
+/******************************/
+
+/* navigatie background */
+nav {
+    position: absolute;
+    transform: translateX(-110%);
+    background-color: #FFFFFF;
+    width: 110%;
+    height: 100vh;
+    display: flex;
+    transition: .5s ease-in-out;
+}
+
+/* als de nav actief is, wordt hij binnengeschoven*/
+nav.active {
+    transform: translateX(-1%);
+}
+
+/* de hoogte van de list items in de nav*/
+nav ul li {
+    height: 35px;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: -3.5rem;
+}
+
+/******************************/
+/*          HEADER            */
+/******************************/
 header {
     background-image: url('../images/home-mount-everest_1280x.jpg');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 350px;
-    min-height: 350px;
+    height: 400px;
+    min-height: 400px;
 
 }
 
-/* stijling van de navigatie */
-
-
-nav ul li {
-    color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 1rem;
-    list-style: none;
-    display: none;
-}
-
-nav img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    margin-top: 1rem;
-}
-
-nav h1 {
+header h1 {
     font-size: 1.2rem;
     text-align: center;
     margin-top: 4rem;
@@ -95,9 +170,10 @@ nav h1 {
     margin-left: 2rem;
     margin-right: 2rem;
     letter-spacing: 0.15em;
+    line-height: 2.5rem;
 }
 
-nav button {
+header button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -110,11 +186,64 @@ nav button {
 
 }
 
-nav a {
+/* stijling van de navigatie */
+
+nav {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+
+}
+
+nav ul li {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    list-style: none;
+    /*display: none;*/
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding: 0.5rem 0rem 0rem 0rem;
+    border-top: solid;
+    border-width: 1px;
+    border-color: #c8c8c8;
+}
+
+nav ul li:nth-of-type(8) {
+    color: #c8c8c8;
+
+}
+
+nav ul li:nth-of-type(1) img {
+    margin-left: 17rem;
+}
+
+nav ul li:nth-of-type(2) img {
+    margin-left: 18rem;
+}
+
+nav ul li:nth-of-type(7) img {
+    margin-left: 17rem;
+}
+
+nav ul li img {
+    width: 1rem;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+header a:nth-of-type(2){
     text-transform: uppercase;
     color: #000;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 0.8rem;
     display: flex;
     justify-content: flex-end;
     margin-top: -1.3rem;
@@ -122,45 +251,112 @@ nav a {
 
 }
 
-img {
+.cssnewarrivals header a:nth-of-type(2){
+    color: #fff;
+}
+
+
+
+/******************************/
+/*          SECTIONS            */
+/******************************/
+/* stijling van de eerste section, 3 afbeeldingen speels naast elkaar */
+
+main section:nth-of-type(1) {
     max-width: 100%;
 }
 
 main section:nth-of-type(1) {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main article:nth-of-type(2) {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: flex-start;
+}
+
+main article:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+main article:nth-of-type(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
+}
+
+main section article img {
+    padding: 1rem;
+}
+
+main section article:nth-of-type(2) img {
+    max-width: 13rem;
+}
+
+main section article:nth-of-type(4) h2 {
+    color: #000;
+}
+
+main section article:nth-of-type(4) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    :
+}
+
+main section article:nth-of-type(4) button {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 55px;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c8c8c8;
+    margin: 3rem;
+}
+
+main section article:nth-of-type(4) p {
+    margin: 2rem 2rem 0rem 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/* stijling van de sections, background image + alles centreren */
+
+
+main section:nth-of-type(2) {
     background-image: url('../images/BP_400x.jpg');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     height: 350px;
     min-height: 350px;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-/*main section:nth-of-type(2) {
-    position: relative;
-        background-image: url('../images/Mickey_Mouse_Mobile_2500x.jpg');
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 350px;
-    min-height: 350px;
-
-}
-*/
-
-main section:nth-of-type(2) {
-    position: relative;
+main section:nth-of-type(3) {
     background-image: url('../images/classic_home_tile.001_1_1800x_47514886-9faa-4625-bb13-1e660f37ed9a_1800x.png');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 550px;
     min-height: 350px;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-main section:nth-of-type(3) {
+main section:nth-of-type(4) {
     position: relative;
     background-image: url('../images/homepage_tiles.002_1500x.png');
     background-position: top;
@@ -168,10 +364,14 @@ main section:nth-of-type(3) {
     background-repeat: no-repeat;
     height: 350px;
     min-height: 350px;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0.25em;
 }
 
-main section:nth-of-type(4) {
+main section:nth-of-type(5) {
     position: relative;
     background-image: url('../images/homepage_tiles.004_1500x.png');
     background-position: top;
@@ -179,125 +379,124 @@ main section:nth-of-type(4) {
     background-repeat: no-repeat;
     height: 350px;
     min-height: 350px;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0.25em;
 }
 
-main section:nth-of-type(5) {
+main section:nth-of-type(6) {
     position: relative;
     background-image: url('../images/mobile_home_images_large.002_1_2500x.png');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 350px;
-    min-height: 350px;
-
+    height: 400px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+/******************************/
+/*        TYPOGRAFIE          */
+/******************************/
+/* stijling van de typografie in de sections */
 
 
-main section:nth-of-type(1) h2 {
+main section h2 {
     color: #fff;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 10rem;
-}
+    margin-bottom: 2rem;
+    letter-spacing: 0.068em;
 
-main section:nth-of-type(2) h2 {
-    color: #000;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 7rem;
 }
 
 main section:nth-of-type(3) h2 {
-    color: #fff;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 10rem;
+    font-size: 2.2rem;
+    padding: 3rem 4rem 0rem;
 }
 
-main section:nth-of-type(4) h2 {
-    color: #fff;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 10rem;
+/* deze section heeft als enige een andere font-kleur*/
+
+main section:nth-of-type(3) h2 {
+    color: #000;
 }
 
-main section:nth-of-type(5) h2 {
-    color: #fff;
-    font-weight: 400;
-    text-align: center;
-}
 
-main section:nth-of-type(2) p {
+main section:nth-of-type(3) p {
     color: #96968A;
     font-weight: 300;
     text-align: center;
     text-decoration: underline;
 }
 
+/******************************/
+/*          BUTTONS            */
+/******************************/
+/* stijling van de buttons in de sections */
 
-
-main section:nth-of-type(1) button {
-    display: block;
-    margin-left: 6rem;
+main section:nth-of-type(2) button {
     background-color: #fff;
     color: #000;
     padding: 5px 20px;
     text-decoration: none;
     border-style: solid;
     border-color: #fff;
-    position: absolute;
-}
-
-main section:nth-of-type(3) button {
-    display: block;
-    margin-left: 6rem;
-    background-color: transparent;
-    color: #fff;
-    padding: 5px 20px;
-    text-decoration: none;
-    border-style: solid;
-    border-color: #fff;
-    position: absolute;
-    border-width: 1px;
-
 }
 
 main section:nth-of-type(4) button {
-    display: block;
-    margin-left: 6rem;
     background-color: transparent;
     color: #fff;
     padding: 5px 20px;
     text-decoration: none;
     border-style: solid;
     border-color: #fff;
-    position: absolute;
     border-width: 1px;
-
 }
 
 main section:nth-of-type(5) button {
     display: block;
-    margin-left: 6rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px;
+}
+
+main section:nth-of-type(6) button {
+    display: block;
     background-color: #fff;
     color: #000;
     padding: 5px 20px;
     text-decoration: none;
     border-style: solid;
     border-color: #fff;
-    position: absolute;
+    font-weight: 500;
+    height: 28px;
+    min-width: 180px;
+    font-size: 12px;
 }
 
-
-main section:nth-of-type(5) p{
+main section:nth-of-type(6) p {
     color: #fff;
     text-align: center;
     max-width: 70%;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 2rem;
 }
 
-/* footer stijling */
+/******************************/
+/*          FOOTER            */
+/******************************/
+
 footer section ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -314,7 +513,6 @@ footer section li {
     margin-left: 1rem;
 }
 
-
 footer h3 {
     font-size: 18px;
     letter-spacing: 1.72px;
@@ -323,7 +521,6 @@ footer h3 {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 1.5rem;
-
 }
 
 footer section p {
@@ -332,17 +529,15 @@ footer section p {
     margin-top: 1rem;
 }
 
-footer section p:nth-of-type(2){
+footer section p:nth-of-type(2) {
     margin-bottom: 2rem;
     margin-right: 2rem;
     font-weight: 200;
 }
 
-
 footer section img {
     max-width: 20px;
-    margin-left: 1rem;
-    margin-right: -1rem;
+    margin: 0.25rem;
 }
 
 footer button {
@@ -358,4 +553,100 @@ footer button {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: 400;
+}
+
+footer section:nth-of-type(3) {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+/******************************/
+/*      TWEEDE PAGINA         */
+/******************************/
+
+/* andere header afbeelding*/
+
+.cssnewarrivals header {
+    background-image: url('../images/collection_headers_new_site.001_1200x.png');
+    height: 300px;
+    min-height: 300px;
+}
+
+/* plaatsen van items in een grid */
+
+.cssnewarrivals main section {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* sommige items moet ik specifiek een positie geven, anders pakt hij de css wat ik voor de homepage heb gebruikt */
+
+.ccsnewarrivals main article:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.cssnewarrivals main article:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.cssnewarrivals main article:nth-of-type(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.cssnewarrivals main section:nth-of-type(1) {
+    background-image: none;
+}
+
+.cssnewarrivals main section article {
+    width: 10rem;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.cssnewarrivals main section article img{
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.cssnewarrivals h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    letter-spacing: 0.15em;
+    line-height: 2.5rem;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.cssnewarrivals nav a {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -1.3rem;
+    margin-right: 1.3rem;
+
+}
+
+.cssnewarrivals main section article h2 {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 0px;
 }
