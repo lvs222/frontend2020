@@ -75,9 +75,9 @@ header div:nth-of-type(1) {
     width: auto;
 }
 
-header nav div{
+header nav div {
     position: absolute;
-    
+
 }
 
 /* ruimte hamburger */
@@ -143,8 +143,8 @@ nav.active {
 }
 
 
-nav ul{
-position: absolute;
+nav ul {
+    position: absolute;
 }
 
 /* de hoogte van de list items in de nav*/
@@ -153,7 +153,7 @@ nav ul li {
     margin-left: 2rem;
 }
 
-.logo{
+.logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -185,7 +185,7 @@ header h1 {
     line-height: 2.5rem;
 }
 
-body header section:nth-of-type(2) h2{
+body header section:nth-of-type(2) h2 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -201,11 +201,6 @@ body header section:nth-of-type(2) h2{
 
 }
 
-
-/* cool css hover effect */
-
-a:hover{
-}
 /* stijling van de navigatie */
 
 nav {
@@ -259,7 +254,7 @@ img {
     max-width: 100%;
 }
 
-body header section a{
+body header section a {
     text-transform: uppercase;
     color: #000;
     font-weight: 300;
@@ -271,7 +266,7 @@ body header section a{
 
 }
 
-.cssnewarrivals header a:nth-of-type(2){
+.cssnewarrivals header a:nth-of-type(2) {
     color: #fff;
 }
 
@@ -639,7 +634,7 @@ footer section:nth-of-type(3) {
     margin-top: 3rem;
 }
 
-.cssnewarrivals main section article img{
+.cssnewarrivals main section article img {
     min-width: 200px;
     max-width: 200px;
     min-height: 200px;
@@ -659,12 +654,11 @@ footer section:nth-of-type(3) {
     font-weight: 400;
 }
 
-.cssnewarrivals section  a {
+.cssnewarrivals section a {
     text-transform: uppercase;
     color: #fff;
     font-weight: 300;
     font-size: 12px;
-    display: flex;
     justify-content: flex-end;
     margin-top: -1.3rem;
     margin-right: 1.3rem;
@@ -675,4 +669,75 @@ footer section:nth-of-type(3) {
     color: #000;
     font-size: 16px;
     margin-bottom: 0px;
+}
+
+/******************************/
+/*      ANIMATIONS         */
+/******************************/
+
+/* bounce in van de h1 homepage */
+/* met hulp van: https://thoughtbot.com/blog/css-animation-for-beginners */
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+        color: #fff;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+header h1 {
+    animation-duration: 4s;
+    animation-name: bounceIn;
+}
+
+/* bounce in van de h1 new arrivals page */
+/* met hulp van: https://thoughtbot.com/blog/css-animation-for-beginners */
+
+@keyframes bounceIn2 {
+    0% {
+        transform: rotate(0turn);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.cssnewarrivals header h1 {
+    animation-duration: 2s;
+    animation-name: bounceIn2;
+}
+
+/* animatie button */
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body header section:nth-of-type(2) h2 {
+    animation-duration: 6s;
+    animation-name: slideIn;
+}
+
+/*zoom in on images*/
+
+img:hover{
+transform: scale(1.2);
 }
